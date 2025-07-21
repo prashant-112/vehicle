@@ -1,0 +1,360 @@
+.vehicle-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  height: fit-content;
+}
+
+.vehicle-card:hover {
+  box-shadow: 0 8px 40px rgba(0,0,0,0.15);
+  transform: translateY(-4px);
+}
+
+.vehicle-card.unavailable {
+  opacity: 0.7;
+}
+
+.vehicle-card.unavailable:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.vehicle-card-image {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+}
+
+.vehicle-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.vehicle-card:hover .vehicle-card-image img {
+  transform: scale(1.05);
+}
+
+.bookmark-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  z-index: 2;
+}
+
+.bookmark-btn:hover {
+  background: rgba(255, 255, 255, 1);
+  transform: scale(1.1);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.bookmark-btn.bookmarked {
+  background: rgba(255, 67, 67, 0.1);
+  color: #ff4343;
+}
+
+.bookmark-btn.bookmarked:hover {
+  background: rgba(255, 67, 67, 0.2);
+}
+
+.availability-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 2;
+}
+
+.availability-badge .status {
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.availability-badge .status.available {
+  background: rgba(40, 167, 69, 0.9);
+}
+
+.availability-badge .status.unavailable {
+  background: rgba(220, 53, 69, 0.9);
+}
+
+.vehicle-card-content {
+  padding: 1.5rem;
+}
+
+.vehicle-header {
+  margin-bottom: 1rem;
+}
+
+.vehicle-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 0.3rem;
+  line-height: 1.3;
+}
+
+.vehicle-model {
+  color: #6c757d;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.vehicle-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.price {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #007bff;
+}
+
+.year {
+  font-size: 0.9rem;
+  color: #6c757d;
+  font-weight: 600;
+}
+
+.vehicle-details {
+  margin-bottom: 1rem;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.85rem;
+}
+
+.detail-icon {
+  font-size: 1rem;
+  width: 20px;
+  text-align: center;
+}
+
+.detail-text {
+  color: #495057;
+  font-weight: 500;
+}
+
+.vehicle-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.feature-tag {
+  background: #f8f9fa;
+  color: #495057;
+  padding: 0.3rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  border: 1px solid #e9ecef;
+}
+
+.card-footer {
+  margin-top: auto;
+}
+
+.financing-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-size: 0.8rem;
+}
+
+.financing-rate {
+  background: #e3f2fd;
+  color: #1976d2;
+  padding: 0.3rem 0.6rem;
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+.warranty {
+  background: #f3e5f5;
+  color: #7b1fa2;
+  padding: 0.3rem 0.6rem;
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+.view-details-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+  color: white;
+  border: none;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.view-details-btn:hover {
+  background: linear-gradient(135deg, #0056b3 0%, #004085 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(0,123,255,0.3);
+}
+
+.view-details-btn:active {
+  transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .vehicle-card-content {
+    padding: 1.2rem;
+  }
+  
+  .vehicle-title {
+    font-size: 1.1rem;
+  }
+  
+  .price {
+    font-size: 1.3rem;
+  }
+  
+  .vehicle-features {
+    margin-bottom: 1rem;
+  }
+  
+  .financing-info {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: stretch;
+  }
+  
+  .financing-rate,
+  .warranty {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .vehicle-card-image {
+    height: 180px;
+  }
+  
+  .vehicle-card-content {
+    padding: 1rem;
+  }
+  
+  .bookmark-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+  }
+  
+  .availability-badge .status {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.7rem;
+  }
+  
+  .vehicle-title {
+    font-size: 1rem;
+  }
+  
+  .price {
+    font-size: 1.2rem;
+  }
+  
+  .detail-item {
+    font-size: 0.8rem;
+  }
+  
+  .feature-tag {
+    font-size: 0.7rem;
+    padding: 0.25rem 0.5rem;
+  }
+}
+
+/* Focus styles for accessibility */
+.vehicle-card:focus,
+.bookmark-btn:focus,
+.view-details-btn:focus {
+  outline: 2px solid #007bff;
+  outline-offset: 2px;
+}
+
+/* Animation for card appearance */
+.vehicle-card {
+  opacity: 0;
+  animation: cardFadeIn 0.6s ease-out forwards;
+}
+
+@keyframes cardFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hover effects for interactive elements */
+.vehicle-card-content * {
+  transition: color 0.3s ease;
+}
+
+.vehicle-card:hover .vehicle-title {
+  color: #007bff;
+}
+
+.vehicle-card:hover .price {
+  color: #0056b3;
+}
+
+/* Print styles */
+@media print {
+  .vehicle-card {
+    break-inside: avoid;
+    box-shadow: none;
+    border: 1px solid #ddd;
+  }
+  
+  .bookmark-btn,
+  .view-details-btn {
+    display: none;
+  }
+  
+  .vehicle-card:hover {
+    transform: none;
+    box-shadow: none;
+  }
+}

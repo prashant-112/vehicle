@@ -1,0 +1,28 @@
+{
+  "dependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "vite": "^7.0.5"
+  },
+  "scripts": {
+    "start": "vite"
+  },
+  "name": "vehicle-store-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prashant-112/vehicle-store-backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/prashant-112/vehicle-store-backend/issues"
+  },
+  "homepage": "https://github.com/prashant-112/vehicle-store-backend#readme"
+}
